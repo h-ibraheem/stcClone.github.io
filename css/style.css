@@ -1,0 +1,232 @@
+/* Start Variables */
+:root {
+    --main-color: #4f008c;
+    --secondary-color: #ff375e;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+  }
+  /* End Variables */
+  /* Start Global Rules */
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Work Sans", sans-serif;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+a{
+  text-decoration: none;
+}
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+
+  /* Start Header */
+  header .container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+  header .lang a{
+    text-align: center;
+  }
+
+  header .container img{
+    height: 35px;
+  }
+
+  /* End Header */
+
+  /* start Content */
+  .content{
+    background-image: url(../images/2v1.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+  }
+  .content .container{
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    width: 380px;
+    background-color:#ffffff ;
+    height: 800px;
+    padding: 30px;
+    box-shadow:  2px 4px 0 rgba(0, 0, 0, 0.3);
+
+  }
+@media (max-width:797px) {
+  .content .container{
+    right: 0;
+    width: 100%;
+  }
+  
+}
+  .content .container .business .content-head{
+    margin-bottom: 15px;
+    width: 100%;
+    position: relative;
+  }
+
+  .content .container .business .content-head a{
+    font-weight: bold;
+    width: fit-content;
+    margin: 0 15px 17px 0;
+    color: #999;
+   
+  }
+
+  .content .container .business .content-head a.active{
+    color: var(--main-color);
+  }
+
+  .content .container .business .content-head a:hover:not(.active){
+    color: var(--secondary-color);
+  }
+
+  .content .container .business .content-head a.active::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 4px;
+    background: transparent;
+    bottom: 4px;
+    left: 0;
+    background: var(--main-color);
+    transform: translateY(20px);
+  }
+
+  .content .business .title{
+    display: flex;
+    align-items: center;
+    padding-top: 13px;
+    position: relative;
+  }
+  .content .business .title h4{
+    color: var(--main-color);
+    padding: 0;
+    margin: 5px 0;
+
+  }
+  .content .business .title p{
+    font-size: 15px;
+    color: #999999;
+    margin:5px 0 ;
+  }
+
+  .content .business .title span{
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+
+  .business form{
+    padding: 30px 0 15px 0;
+  }
+
+  .input-group{
+    Position: relative;
+    border-bottom: 1px solid #999;
+    height: 50px;
+    width: 100%;
+    margin-top: 35px;
+ }
+
+.span-logo{  
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+  }
+  
+  .label{
+    position: absolute;
+    margin-left: 48px;
+    top: 10px;
+    font-size: 15px;
+  }
+  .input{
+    font-size: 15px;
+    outline: none;
+    padding: 30px 0 0 48px;
+    bottom: 0;
+    border: none;
+  }
+
+ 
+  form input[ type="submit"]{
+    border: none;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  form input[ type="submit"]:hover{
+    border: 2px solid var(--secondary-color);
+    background-color: white;
+    color: var(--secondary-color);
+  }
+
+  .link a{
+    display: block;
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid var(--secondary-color);
+    background-color: white;
+    color: var(--secondary-color);
+    font-size: 16px;
+  }
+
+  .link a:last-child{
+    border: none;
+    font-weight: 500;
+  }
+
+  .link a:not(:last-child):hover{
+ 
+    background-color: var(--secondary-color);
+    color: white; 
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .link a:last-child:hover{
+    color: var(--main-color);
+  }
+  /* End Content */
